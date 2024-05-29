@@ -1,0 +1,62 @@
+.main {
+	user-select: none;
+	cursor: default;
+	position: relative;
+	font-size: 0.7rem;
+	padding: 5px 10px;
+	border: solid 1px lightgray;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.menu {
+	display: none;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	border: solid 1px lightgray;
+	border-radius: 10px;
+}
+
+.menuItem {
+	list-style-type: none;
+	user-select: none;
+	cursor: default;
+	white-space: nowrap;
+
+	position: relative;
+	font-size: 0.7rem;
+	padding: 5px 10px;
+	color: black;
+	background-color: white;
+}
+
+.menuItem:hover {
+	color: white;
+	background-color: #007bff;
+}
+
+.menuItem:first-child {
+	border-radius: 10px 10px 0 0;
+}
+
+.menuItem:last-child {
+	border-radius: 0 0 10px 10px;
+}
+
+.main:hover>.menu {
+	display: block;
+}
+
+.menuItem:hover>.menu {
+	display: block;
+}
+
+.menuItem:not(:has(.menu)) {
+	cursor: pointer;
+}
+
+.menuItem:active:not(:has(.menu)) {
+	filter: brightness(80%);
+}

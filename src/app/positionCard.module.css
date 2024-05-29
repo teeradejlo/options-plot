@@ -1,0 +1,65 @@
+.card {
+	list-style-type: none;
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 15px;
+	background-color: white;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.card:hover:not(:has(.delButton:hover, .enableBox:hover)) {
+	filter: brightness(90%);
+}
+
+.card:active:not(:has(.delButton:hover, .enableBox:hover)) {
+	filter: brightness(80%);
+}
+
+.cardLeft {
+	display: flex;
+	align-items: center;
+}
+
+.cardLeft>i {
+	margin-right: 8px;
+}
+
+.cardRight {
+	display: flex;
+	align-items: center;
+}
+
+.delButton {
+	line-height: 0;
+	padding: 7px;
+	cursor: pointer;
+
+	color: rgb(215, 63, 63);
+	background-color: white;
+	border: solid rgb(215, 63, 63) 1px;
+	border-radius: 5px;
+}
+
+.delButton>i {
+	font-size: 0.7rem;
+	vertical-align: middle;
+}
+
+.delButton:hover {
+	color: white;
+	background-color: rgb(215, 63, 63);
+}
+
+.enableBox {
+	cursor: pointer;
+	margin-right: 15px;
+	transform: scale(2.1);
+}
+
+.cardCollapseBody {
+	padding-left: 30px;
+	padding-right: 15px;
+}
